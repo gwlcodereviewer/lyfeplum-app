@@ -1,0 +1,13 @@
+Password: Lyfeplum@2023
+Alias: lyfeplum
+
+FB key hashes - 
+ZOa6H4anYxVsrCzJpQ3GlovhCsA=
+
+
+Command to generate key hashes: 
+keytool -exportcert -alias lyfeplum -keystore /Users/gwl/Desktop/Lyfeplum Android Keys/lyfeplumKey | openssl sha1 -binary | openssl base64
+
+
+key hashes password : Lyfeplum@2023
+

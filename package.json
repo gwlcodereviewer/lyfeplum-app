@@ -1,0 +1,133 @@
+{
+  "name": "Lyfeplum",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "pod": "cd ios && pod install && cd ..",
+    "ios:dev": "react-native run-ios --simulator='iPhone 15 Pro Max'"
+  },
+  "dependencies": {
+    "@invertase/react-native-apple-authentication": "^2.2.2",
+    "@react-native-async-storage/async-storage": "^1.18.1",
+    "@react-native-community/checkbox": "^0.5.15",
+    "@react-native-community/datetimepicker": "^7.6.3",
+    "@react-native-community/netinfo": "^9.3.9",
+    "@react-native-community/push-notification-ios": "^1.11.0",
+    "@react-native-community/slider": "^4.4.2",
+    "@react-native-google-signin/google-signin": "^6.0.0",
+    "@react-navigation/bottom-tabs": "^6.5.7",
+    "@react-navigation/drawer": "^6.6.2",
+    "@react-navigation/material-top-tabs": "^6.6.2",
+    "@react-navigation/native": "^6.1.6",
+    "@react-navigation/native-stack": "^6.9.12",
+    "@react-navigation/stack": "^6.3.16",
+    "@reduxjs/toolkit": "^1.9.3",
+    "base64-arraybuffer": "^1.0.2",
+    "moment": "^2.29.4",
+    "react": "18.1.0",
+    "react-native": "0.70.6",
+    "react-native-actionsheet": "^2.4.2",
+    "react-native-compressor": "^1.6.1",
+    "react-native-device-info": "^10.8.0",
+    "react-native-document-picker": "^6.0.4",
+    "react-native-element-dropdown": "^2.9.0",
+    "react-native-fbsdk-next": "^6.2.0",
+    "react-native-fs": "^2.20.0",
+    "react-native-gesture-handler": "2.12.0",
+    "react-native-iap": "^12.10.7",
+    "react-native-image-crop-picker": "^0.40.0",
+    "react-native-image-picker": "^5.3.1",
+    "react-native-image-progress": "^1.2.0",
+    "react-native-image-viewing": "^0.2.2",
+    "react-native-image-zoom-viewer": "^3.0.1",
+    "react-native-inappbrowser-reborn": "^3.7.0",
+    "react-native-keyboard-aware-scroll-view": "^0.9.5",
+    "react-native-localization": "^2.3.1",
+    "react-native-modal-datetime-picker": "^15.0.0",
+    "react-native-orientation-locker": "^1.5.0",
+    "react-native-pell-rich-editor": "^1.9.0",
+    "react-native-progress": "^5.0.0",
+    "react-native-reanimated": "^2.9.1",
+    "react-native-receive-sharing-intent": "^2.0.0",
+    "react-native-render-html": "^6.3.4",
+    "react-native-safe-area-context": "^4.5.1",
+    "react-native-screens": "^3.20.0",
+    "react-native-share": "^8.2.2",
+    "react-native-splash-screen": "^3.3.0",
+    "react-native-super-grid": "^5.0.0",
+    "react-native-svg": "^12.3.0",
+    "react-native-toast-message": "^2.1.6",
+    "react-native-vector-icons": "^10.0.0",
+    "react-native-video": "^5.2.1",
+    "react-native-video-controls": "^2.8.1",
+    "react-native-webview": "^12.0.2",
+    "react-redux": "^8.0.5",
+    "rn-fetch-blob": "^0.12.0",
+    "styled-components": "^5.3.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@tsconfig/react-native": "^2.0.2",
+    "@types/jest": "^26.0.23",
+    "@types/react": "^18.0.21",
+    "@types/react-native": "^0.70.6",
+    "@types/react-native-video": "^5.0.14",
+    "@types/react-test-renderer": "^18.0.0",
+    "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.32.0",
+    "jest": "^26.6.3",
+    "jest-svg-transformer": "^1.0.0",
+    "jest-transform-stub": "^2.0.0",
+    "metro-react-native-babel-preset": "0.72.3",
+    "react-native-svg-transformer": "^1.0.0",
+    "react-test-renderer": "18.1.0",
+    "typescript": "^4.8.3"
+  },
+  "jest": {
+    "preset": "react-native",
+    "testEnvironment": "node",
+    "verbose": true,
+    "globals": {
+      "__DEV__": true
+    },
+    "haste": {
+      "defaultPlatform": "ios",
+      "platforms": [
+        "android",
+        "ios",
+        "native"
+      ]
+    },
+    "setupFilesAfterEnv": [
+      "./jest/setup.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/fileTransformer.js",
+      "\\.(css|less)$": "<rootDir>/fileTransformer.js",
+      "^components(.*)$": "<rootDir>/src/components$1",
+      "^hooks(.*)$": "<rootDir>/src/hooks$1",
+      "^screens(.*)$": "<rootDir>/src/screens$1"
+    },
+    "collectCoverage": true,
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-native)|(@react-navigation)|(native-base-.*)|(react-native-.*)|(prop-types)|(react-native-google-signin)|(@invertase/react-native-apple-authentication)|(@react-native-firebase/messaging)|(@react-native-firebase/app)|(@react-native-firebase/auth)|(@react-native-firebase/firestore)|(@react-native-community/push-notification-ios)|(@dudigital/react-native-zoomable-view)|(react-native-keychain)|(@haskkor/react-native-pincode)|(@expo/react-native-action-sheet)/)"
+    ],
+    "coverageReporters": [
+      "html"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)?$": "ts-jest",
+      "^.+\\.(js|jsx)$": "babel-jest"
+    }
+  }
+}
